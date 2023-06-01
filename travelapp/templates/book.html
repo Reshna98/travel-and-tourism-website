@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <title>Travel and Tourism</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+ 
+</head>
+
+  <style>
+     .package-card {
+      margin-bottom: 20px;
+    }
+
+    .total-price {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .book-now-btn {
+      margin-top: 20px;
+    }
+   .navbar {
+      transition: background-color 0.3s ease-in-out; 
+      background-color: transparent; 
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar.scrolled {
+      background-color: #333;
+    }
+    .card-body {
+    height: 120px;
+  }
+  .card-img-top {
+    height: 300px;
+    object-fit: cover;
+  }
+  .card-new{
+    height: 200px; 
+  }
+
+  </style>
+</head>
+<body style="background-color: rgb(214, 214, 214);">
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Travel Diary</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'home'%}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'home'%}">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'home'%}">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{%url 'home'%}">Contact</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="{%url 'login'%}">Logout</a>
+        </li> -->
+      </ul>
+    </div>
+  </nav>
+
+  <section class="second" style="margin-top: 80px;">
+    <div class="container" style="text-align: center;">
+      <h1>Package Details</h1>
+    </div>
+    <div class="container">
+        <!-- <h1>Package Details</h1> -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card package-card">
+              <img class="card-img-top" src="https://images.pexels.com/photos/3293192/pexels-photo-3293192.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Food Photo">
+              <div class="card-body card-new">
+                <h5 class="card-title">Waterside Resort</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices varius
+                  scelerisque. Nullam mattis est a tincidunt eleifend. Mauris sed cursus magna, et viverra turpis. Vivamus
+                  at condimentum mi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card package-card">
+              <img class="card-img-top" src="https://images.pexels.com/photos/1320686/pexels-photo-1320686.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Accommodation Photo">
+              <div class="card-body card-new">
+                <h5 class="card-title">Sea side</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices varius
+                  scelerisque. Nullam mattis est a tincidunt eleifend. Mauris sed cursus magna, et viverra turpis. Vivamus
+                  at condimentum mi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card package-card">
+              <img class="card-img-top" src="https://images.pexels.com/photos/2525898/pexels-photo-2525898.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Activity Photo">
+              <div class="card-body card-new">
+                <h5 class="card-title">Sunset View</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices varius
+                  scelerisque. Nullam mattis est a tincidunt eleifend. Mauris sed cursus magna, et viverra turpis. Vivamus
+                  at condimentum mi.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card package-card">
+              <img class="card-img-top" src="https://images.pexels.com/photos/12431670/pexels-photo-12431670.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Activity Photo">
+              <div class="card-body card-new">
+                <h5 class="card-title">Private Pool</h5>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices varius
+                  scelerisque. Nullam mattis est a tincidunt eleifend. Mauris sed cursus magna, et viverra turpis. Vivamus
+                  at condimentum mi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>  
+<section class="second" style="margin-top: 80px;">
+        <div class="container" style="text-align: center;">
+          <h1>Foods</h1>
+        </div>
+      <div class="container-fluid"> 
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <a href="" class="card-link" style="color: black;text-decoration: none;">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/16822692/pexels-photo-16822692/free-photo-of-food-and-tea.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 1">
+              <div class="card-body">
+                <h4 class="card-title text-center" style="color: rgb(107, 7, 7);">Maldivian Cuisine</h4>
+                <!-- <h5 class="card-text">
+                  On Entire Range!</h5> -->
+                  <!-- <a href="{%url 'book'%}" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">Book Now</button></a> -->
+              </div>
+            </div>
+          </a>
+          </div>
+          <div class="col-md-4  mb-4">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/15735597/pexels-photo-15735597/free-photo-of-food-in-a-pan.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 2">
+              <div class="card-body">
+                <h4 class="card-title text-center" style="color: rgb(107, 7, 7);">Fusion Cuisine</h4>
+                <!-- <h5 class="card-text">
+                  On Entire Range!</h5> -->
+                  <!-- <a href="" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">Book Now</button></a> -->
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card">
+              <img src="https://images.pexels.com/photos/15733187/pexels-photo-15733187/free-photo-of-food-on-a-table.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 3">
+              <div class="card-body">
+                <h4 class="card-title text-center" style="color: rgb(107, 7, 7);">Seafood</h4>
+                <!-- <h5 class="card-text">
+                  On Entire Range!</h5> -->
+                  <!-- <a href="" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">Book Now</button></a> -->
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+<section class="second" style="margin-top: 80px;">
+    <div class="container" style="text-align: center;">
+      <h1>Extra Activities</h1>
+    </div>
+  <div class="container-fluid"> 
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <a href="" class="card-link" style="color: black;text-decoration: none;">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/4809019/pexels-photo-4809019.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 1">
+          <div class="card-body">
+            <h4 class="card-title" style="color: rgb(65, 44, 253);">Scuba Diving</h4>
+            <!-- <h5 class="card-text">
+              On Entire Range!</h5> -->
+              <!-- <a href="{%url 'book'%}" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">Book Now</button></a> -->
+          </div>
+        </div>
+      </a>
+      </div>
+      <div class="col-md-4  mb-4">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/1430675/pexels-photo-1430675.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 2">
+          <div class="card-body">
+            <h4 class="card-title" style="color: rgb(65, 44, 253);">Water Sports</h4>
+            <!-- <h5 class="card-text">
+              On Entire Range!</h5> -->
+              <!-- <a href="" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">Book Now</button></a> -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://images.pexels.com/photos/1074451/pexels-photo-1074451.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 3">
+          <div class="card-body">
+            <h4 class="card-title" style="color: rgb(65, 44, 253);">Paragliding</h4>
+            <!-- <h5 class="card-text">
+              On Entire Range!</h5> -->
+              <!-- <a href="" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">Book Now</button></a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+<section>
+    <div class="container d-flex justify-content-center align-items-center" style="margin-bottom: 10px;">
+      <div class="card" style="height: 250px; width: 800px;">
+        <!-- <img class="card-img-top" src="package-photo.jpg" alt="Package Photo"> -->
+        <div class="card-body new">
+          <h5 class="card-title">Maldives Vacation Package</h5>
+          <p class="card-text">Enjoy a luxurious 7-day stay in the Maldives</p>
+          <p class="card-text">Price: $2000</p>
+          <p class="card-text">Duration: 7 days</p>
+          <a href="{%url 'login'%}" class="btn" style="background-color: black;color: white;">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>About Us</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita aperiam voluptas, perferendis soluta necessitatibus vero.</p>
+        </div>
+        <div class="col-md-3">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4>Contact Info</h4>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
+            <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+            <li><i class="fas fa-envelope"></i> info@example.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>&copy; 2023 Travel Diary. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Change navbar color on scroll
+    $(window).scroll(function() {
+      if ($(document).scrollTop() > 50) {
+        $('.navbar').addClass('scrolled');
+      } else {
+        $('.navbar').removeClass('scrolled');
+      }
+    });
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

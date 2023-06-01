@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <title>Travel and Tourism</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+  .image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 300px;
+  transition: transform 0.3s;
+}
+
+.image-container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.image-container .text {
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+
+} 
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.btn-class {
+  margin-top: 10px;
+}
+
+    /* .gallery {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.gallery:hover::before {
+  opacity: 1;
+} */
+
+    /* .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); 
+  } */
+ .gallery:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+        }
+
+ .service-item {
+    position: relative;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, background-color 0.3s;
+  }
+
+  .service-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: #70707065;
+  }
+   .card:hover {
+          transform: scale(1.05);
+          transition: transform 0.3s ease;
+        } 
+ .carousel-inner .carousel-item video {
+      width: 100%;
+      height: 500px; /* Adjust the height as desired */
+      object-fit: cover;
+    }
+  .carousel-inner {
+    position: relative;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+  
+  }
+  .card{
+    border-radius: 5px;
+  }
+  .card-img-top {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    height: 120px;
+  }
+
+  .card-title {
+    color: rgb(253, 44, 166);
+  }
+    .navbar {
+      transition: background-color 0.3s ease-in-out; 
+      background-color: transparent; 
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar.scrolled {
+      background-color: #333;
+    }
+    /* .video-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .video-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    } */
+    .overlay-container {
+      position: absolute; 
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .overlay-text {
+      color: #ffffff;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .overlay-button {
+      font-size: 18px;
+      padding: 10px 20px;
+      color: white;
+      background-color: rgb(54, 53, 53);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Travel Diary</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#aboutus">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#service">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contactus">Contact</a>
+        </li>
+        <!-- <li class="nav-item">
+            <a class="nav-link" href="{%url 'login'%}">Logout</a>
+          </li> -->
+      </ul>
+    </div>
+  </nav>
+  <section>
+  <!-- <div class="embed-responsive embed-responsive-16by9">
+    <video id="myVideo" autoplay loop muted playsinline class="embed-responsive-item">
+      <source src="https://player.vimeo.com/external/363625327.sd.mp4?s=2c170349e1fb2195661722ba0a29eb9e837ffac7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+    </video>
+    <div class="container overlay-container">
+      <div class="text-center">
+        <h1 class="overlay-text">Welcome to Travel Diary</h1>
+        <a href="#" class="btn btn-primary overlay-button">Get Started</a>
+      </div>
+    </div> -->
+    <div class="embed-responsive embed-responsive-16by9">
+      <video id="myVideo" autoplay loop muted playsinline class="embed-responsive-item">
+        <source src="https://player.vimeo.com/external/363625327.sd.mp4?s=2c170349e1fb2195661722ba0a29eb9e837ffac7&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+      </video>
+      <div class="container overlay-container">
+        <div class="text-center">
+          <h1 class="overlay-text ">Welcome To Travel Diary</h1>
+          <a href="#" class="btn  overlay-button">Get Started</a>
+        </div>
+      </div>
+      <!-- <div class="container overlay-container">
+        <div class="text-center">
+          <h1 class="text-center">Welcome to Travel Diary</h1>
+          <a href="#" class="btn btn-primary btn-lg ">Get Started</a>
+        </div>
+      </div>
+    </div>
+     -->
+    
+  </div>
+  <!-- <section class="section-container" style="height: 100px; margin-top: 30px;">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="selection">
+            <div class="selection_container d-flex justify-content-center">
+              <select class="form-control boxes mr-2">
+                <option value="countries">Countries</option>
+                <option value="countries">India</option>
+                <option value="countries">America</option>
+                <option value="countries">Switzerland</option>
+                <option value="countries">Finland</option>
+                <option value="countries">France</option>
+                <option value="countries">Indonesia</option>
+                <option value="countries">Asia</option>
+              </select>
+              <select class="form-control boxes mr-2">
+                <option value="countries">Destinations</option>
+                <option value="countries">Paris</option>
+                <option value="countries">Maldives</option>
+                <option value="countries">Turkey</option>
+                <option value="countries">New York</option>
+                <option value="countries">Manali</option>
+                <option value="countries">Bali</option>
+                <option value="countries">Maldives</option>
+              </select>
+              <select class="form-control boxes mr-2">
+                <option value="countries">Budgets</option>
+                <option value="countries">100000</option>
+                <option value="countries">200000</option>
+                <option value="countries">300000</option>
+                <option value="countries">400000</option>
+                <option value="countries">500000</option>
+                <option value="countries">600000</option>
+                <option value="countries">700000</option>
+              </select>
+              <a href="{%url 'turkey'%}" class="btn btn-primary select-btn">Submit</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="second" style="margin-top: 80px;">
+    <div class="container" style="text-align: center;">
+      <h1>Top Destinations</h1>
+    </div>
+  <div class="container-fluid"> 
+    <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <div class="image-container">
+              <img src="https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 4">
+              <div class="overlay  d-flex flex-column justify-content-center align-items-center">
+                <div class="text">Switzerland</div>
+                <div class="button-wrapper">
+                  <a href="" style="text-decoration: none; display: block;margin-top:65%;">
+                    <button class="btn btn-class" style="background-color: black; color: white;">View More</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="card-body text-center">
+             
+              <a href="{%url 'book'%}" style="text-decoration: none;"><button class="btn btn-class" style="background-color: black;color: white;">View More</button></a> 
+            </div> -->
+          </div>
+        </div>
+      <div class="col-md-4 mb-4">
+       
+        <div class="card">
+          <div class="image-container">
+          <img src="https://images.pexels.com/photos/7263897/pexels-photo-7263897.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 1">
+          <div class="overlay  d-flex flex-column justify-content-center align-items-center">
+            <div class="text">India</div>
+          <div class="button-wrapper">
+            <a href="" style="text-decoration: none; display: block;margin-top:65%;">
+              <button class="btn btn-class" style="background-color: black; color: white;">View More</button>
+            </a>
+          </div>
+        </div>
+        </div>
+          <!-- <div class="card-body text-center">
+           
+           
+              <a href="{%url 'book'%}" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">View More</button></a>
+          </div> -->
+        </div>
+      
+      </div>
+      <!-- <div class="col-md-4  mb-4">
+        <div class="card">
+          <div class="image-container">
+          <img src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 2">
+          <div class="overlay">
+            <div class="text">Greece</div>
+            <div class="overlay-content">
+              <a href="" style="text-decoration: none;">
+                <button class="btn btn-class" style="background-color: black; color: white;">View More</button>
+              </a>
+            </div>
+            </div></div>
+            </div> -->
+            <div class="col-md-4 mb-4">
+              <div class="card">
+                <div class="image-container">
+                  <img src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 2">
+                  <div class="overlay  d-flex flex-column justify-content-center align-items-center">
+                    <div class="text">Greece</div>
+                    <div class="button-wrapper">
+                      <a href="" style="text-decoration: none; display: block;margin-top:65%;">
+                        <button class="btn btn-class" style="background-color: black; color: white;">View More</button>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <!-- <div class="card-body text-center">
+                
+                </div> -->
+              </div>
+            </div>
+            
+            
+            
+            
+            
+            
+<!--             
+          <div class="card-body text-center">
+           
+          
+              <a href="" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">View More</button></a>
+          </div>
+        </div>
+      </div>
+       -->
+    </div>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="image-container">
+          <img src="https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 3">
+          <div class="overlay  d-flex flex-column justify-content-center align-items-center">
+            <div class="text">Africa</div>
+            <div class="button-wrapper">
+              <a href="" style="text-decoration: none; display: block;margin-top:65%;">
+                <button class="btn btn-class" style="background-color: black; color: white;">View More</button>
+              </a>
+            </div>
+            </div>
+
+            </div>
+          <!-- <div class="card-body text-center">
+            
+           
+              <a href="" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">View More</button></a>
+          </div> -->
+        </div>
+      </div>
+      
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="image-container">
+          <img src="https://images.pexels.com/photos/1320684/pexels-photo-1320684.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 5">
+          <div class="overlay  d-flex flex-column justify-content-center align-items-center">
+            <div class="text">Maldives</div>
+            <div class="button-wrapper">
+              <a href="{%url 'turkey'%}" style="text-decoration: none; display: block;margin-top:65%;">
+                <button class="btn btn-class" style="background-color: black; color: white;">View More</button>
+              </a>
+            </div>
+            </div>
+            </div>
+          <!-- <div class="card-body text-center">
+            
+           
+              <a href="{%url 'turkey'%}" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">View More</button></a>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <div class="image-container">
+          <img src="https://images.pexels.com/photos/1239162/pexels-photo-1239162.jpeg?auto=compress&cs=tinysrgb&w=600" class="card-img-top" alt="Image 6">
+          <div class="overlay  d-flex flex-column justify-content-center align-items-center">
+            <div class="text">America</div>
+            <div class="button-wrapper">
+              <a href="" style="text-decoration: none; display: block;margin-top:65%;">
+                <button class="btn btn-class" style="background-color: black; color: white;">View More</button>
+              </a>
+            </div>
+            </div>
+            </div>
+          <!-- <div class="card-body text-center">
+            
+           
+              <a href="" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;align-items: center;">View More</button></a>
+          </div> -->
+        </div>
+      </div>
+    </div> 
+  </div>
+  </section>  
+  <section style="margin-top: 80px;">
+    <!-- <div class="container" style="text-align: center;">
+      <h1>Explore The World With Travel Diary</h1>
+    </div> -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <video class="img-fluid" autoplay loop muted>
+            <source src="https://player.vimeo.com/external/363631045.sd.mp4?s=73167f64f98c6fb726776708e972b668f69dd34f&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+          </video>
+          <div class="carousel-caption  d-md-block text-center text-white">
+            <h2 class="mb-4">Explore World With Travel Diary</h2>
+            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <video class="img-fluid" autoplay loop muted>
+          <source src="https://player.vimeo.com/external/406227029.sd.mp4?s=9f5369cd52db12305a27c05935da15b13ab84f45&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+          </video>
+          <div class="carousel-caption   text-center text-white">
+            <h2>Explore World With Travel Diary</h2>
+            
+          </div>
+        </div>
+        <div class="carousel-item">
+          <video class="img-fluid" autoplay loop muted>
+            <source src="https://player.vimeo.com/external/350245334.sd.mp4?s=30aae055c6c199c7fc8ed748f82d93bc3d5cbabf&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+          </video>
+          <div class="carousel-caption  text-center text-white">
+            <h2>Explore World With Travel Diary</h2>
+            
+          </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="text-center">Photo Gallery</h2>
+      <div class="row">
+        <div class="col-md-4  mb-4 gallery" >
+          <a href="path/to/image1.jpg" data-lightbox="gallery" data-title="Image 1">
+            <img src="https://images.pexels.com/photos/15031960/pexels-photo-15031960/free-photo-of-maldives-island-water-villa-sunset.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt="Image 1">
+          </a>
+        </div>
+        <div class="col-md-4  mb-4 gallery">
+          <a href="path/to/image2.jpg" data-lightbox="gallery" data-title="Image 2">
+            <img src="https://images.pexels.com/photos/1271619/pexels-photo-1271619.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt="Image 2">
+          </a>
+        </div>
+        <div class="col-md-4  mb-4 gallery">
+          <a href="path/to/image3.jpg" data-lightbox="gallery" data-title="Image 3">
+            <img src="https://images.pexels.com/photos/2563681/pexels-photo-2563681.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt="Image 3">
+          </a>
+        </div>
+        <div class="col-md-4 mb-4 gallery">
+          <a href="path/to/image4.jpg" data-lightbox="gallery" data-title="Image 4">
+            <img src="https://images.pexels.com/photos/772429/pexels-photo-772429.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt="Image 4">
+          </a>
+        </div>
+        <div class="col-md-4  mb-4 gallery">
+          <a href="path/to/image5.jpg" data-lightbox="gallery" data-title="Image 5">
+            <img src="https://images.pexels.com/photos/5227440/pexels-photo-5227440.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt="Image 5">
+          </a>
+        </div>
+        <div class="col-md-4 mb-4 gallery">
+          <a href="path/to/image6.jpg" data-lightbox="gallery" data-title="Image 6">
+            <img src="https://images.pexels.com/photos/4356144/pexels-photo-4356144.jpeg?auto=compress&cs=tinysrgb&w=600" class="img-fluid" alt="Image 6">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<div id="service"></div>
+<section style="margin-top: 80px;">
+  <div class="container" style="text-align: center;">
+    <h1>Services</h1>
+  </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="service-item">
+            <!-- <i class="fas fa-plane"></i> -->
+            <img src="https://cdn-icons-png.flaticon.com/128/2200/2200326.png">
+            <h3>Flight Booking</h3>
+            <p>Book domestic and international flights with ease.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-item">
+            <!-- <i class="fas fa-hotel"></i> -->
+            <img src="https://cdn-icons-png.flaticon.com/128/2460/2460875.png">
+            <h3>Hotel Reservation</h3>
+            <p>Find and book the perfect hotel for your stay.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-item">
+            <!-- <i class="fas fa-umbrella-beach"></i> -->
+            <img src="https://cdn-icons-png.flaticon.com/128/2664/2664593.png">
+            <h3>Beach Tours</h3>
+            <p>Explore beautiful beaches and enjoy exciting water activities.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-item">
+            <!-- <i class="fas fa-map" style="color: red;"></i> -->
+            <img src="https://cdn-icons-png.flaticon.com/128/7051/7051646.png">
+            <h3>Tourist Guides</h3>
+            <p>Hire knowledgeable guides to enhance your travel experience.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-item">
+            <!-- <i class="fas fa-bus"></i> -->
+            <img src="https://cdn-icons-png.flaticon.com/128/995/995297.png">
+            <h3>Transportation</h3>
+            <p>Arrange comfortable transportation for your travel needs.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="service-item">
+           <img src="https://cdn-icons-png.flaticon.com/128/2659/2659360.png">
+            <h3>Photography Tours</h3>
+            <p>Capture memorable moments with professional photography tours.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section id="aboutus" class="py-5"> -->
+    <section style="margin-top: 80px;" class="py-5"  id="aboutus">
+      <div class="container" style="text-align: center;">
+        <h1>About Us</h1>
+      </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6" style="margin-top: 5%;">
+          <P>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum augue sit amet orci commodo, vel fringilla turpis laoreet.</P>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum augue sit amet orci commodo, vel fringilla turpis laoreet.</p>
+          <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed pharetra, sem in mollis iaculis, arcu enim volutpat massa, nec ullamcorper tortor justo sed nibh.</p>
+        </div>
+        <div class="col-md-6">
+          <img src="https://images.pexels.com/photos/1008155/pexels-photo-1008155.jpeg?auto=compress&cs=tinysrgb&w=600" alt="About Us Image" class="img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contactus" class="py-5">
+    <div class="container" style="background-color: rgba(177, 177, 177, 0.1);">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-6">
+          <h2 class="text-center">Contact Us</h2>
+          <form>
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+            </div>
+            <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+            <div style="padding-bottom: 10px;">
+            <a href="" style="text-decoration: none;"><button class="btn  btn-class" style="background-color: black;color: white;">Submit</button></a></div>
+          </form>
+        </div>
+        <!-- <div class="col-md-6">
+          <h2>Contact Information</h2>
+          <p>123 Main Street</p>
+          <p>City, State ZIP</p>
+          <p>Phone: (123) 456-7890</p>
+          <p>Email: info@example.com</p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+  
+  
+  <footer class="footer bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h4>About Us</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita aperiam voluptas, perferendis soluta necessitatibus vero.</p>
+        </div>
+        <div class="col-md-3">
+          <h4>Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h4>Contact Info</h4>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
+            <li><i class="fas fa-phone"></i> +1 234 567 890</li>
+            <li><i class="fas fa-envelope"></i> info@example.com</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p>&copy; 2023 Travel Diary. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+
+  <script>
+    // Change navbar color on scroll
+    $(window).scroll(function() {
+      if ($(document).scrollTop() > 50) {
+        $('.navbar').addClass('scrolled');
+      } else {
+        $('.navbar').removeClass('scrolled');
+      }
+    });
+  </script>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
